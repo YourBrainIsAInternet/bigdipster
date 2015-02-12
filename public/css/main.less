@@ -1,0 +1,202 @@
+// COLORS
+@primary: #27313A;
+@accent: #0F97AA;
+@secondary: #003037;
+@link: #FFC777;
+@text: #FFFFFF;
+
+// BLENDS
+@accent-font-color: fade(@accent, 87%);
+@copy-color: fade(@text, 54%);
+@heading-color: fade(@text, 87%);
+@link-font-color: fade(@link, 54%);
+@logo-font-color: fade(@accent, 94%);
+@main-color: fade(@primary, 87%);
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* this corrects for a ball that goes off
+    the right side of the page */
+    overflow-x: hidden;
+
+    background-image: url('../../images/whiteboard.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position: center; 
+    background-size: cover;
+
+    font-size: 16pt;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    color: @link-font-color;
+    text-decoration: none;
+}
+
+h1 {
+    color: @accent-font-color;
+    font-family: 'Patua One', cursive;
+    font-size: 90pt;
+    text-align: center;
+    font-weight: normal;
+    // text-shadow: 5px 5px 0px #040404;
+    width: 100%;
+    padding: 15% 0;
+    margin: 0 0 5%;
+}
+
+h1.logo {
+    color: @logo-font-color;
+}
+
+h2 {
+    font-size: 56pt;
+    text-align: center;
+
+    color: @heading-color;
+    // text-shadow: 5px 5px 0px #040404;
+    
+    padding-top: 5%;
+    padding-bottom: 2%;
+    margin: 0;
+}
+
+.quote {
+    background: transparent;
+    color: @accent-font-color;
+    font-family: 'Patua One', cursive;
+    font-size: 35pt;
+    font-style: normal;
+    padding: 1% 20%;
+    text-align: center;
+}
+
+p, .contact-div {
+    text-indent: 2%;
+    padding: 0 15%;
+    text-align: left;
+    margin: 0;
+    font-size: 20pt;
+    padding-bottom: 5%;
+    line-height: 1.4;
+    color: @copy-color; 
+}
+
+#faq {
+    background: @main-color;
+}
+
+.faq {
+    background: @main-color;
+    padding: 0 15%;
+    margin: 0;
+    padding-bottom: 5%;
+    list-style: None;
+    text-align: left;
+    color: @copy-color; 
+}
+
+.faq>li:nth-child(odd) {
+    text-indent: -4%;
+    font-size: 28pt;
+    font-weight: 700;
+    font-style: italic;
+    color: @heading-color;
+}
+
+.faq>li:nth-child(even) {
+    text-indent: 2%;
+    padding-bottom: 4%;
+}
+
+.hovertrap {
+    transition: all 0.5s;
+    position: fixed;
+    top: -150px;
+    right: -150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+.ball {
+    transition: all 0.5s;
+    font-family: 'Patua One', cursive;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: rgba(255,255,255,0.94);
+    box-shadow: 0px 0px 0 50px fade(@secondary, 54%);
+    /* box-shadow: 0px 0px 5px #FFFA06; */
+    right: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-right: -50px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 25pt;
+    color: @logo-font-color;
+}
+
+.hovertrap:hover, .hovertrap.pageenter {
+    right: -450px;
+    top: -450px;
+    border-radius: 500px;
+    width: 1000px;
+    height: 1000px;
+}
+
+.navigation > li {
+    position: absolute;
+    transition: all 0.5s;
+    top: 0px;
+    left: 0px;
+    color: black;
+    /* text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black, -1px 1px 0 black; */
+    list-style: none;
+    font-size: 14pt;
+    width: 78px;
+    text-align: center;
+    height: 78px;
+    border-radius: 39px;
+    line-height: 58pt;
+    text-align: center;
+    background-color: @main-color;
+
+    a {
+        color: @accent-font-color;
+    }
+}
+
+.navigation {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.navigation.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.lightbulb {
+    position: absolute;
+    top: -4%;
+    left: 25%;
+    width: 50%;
+    /* height: 69%; */
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.last-contribute {
+    padding-bottom: 0;
+}
+
+section.infogroup {
+    background: @main-color;
+}

@@ -1,172 +1,9 @@
 <!DOCTYPE html>
-<html> <head>
+<html>
+    <head>
         <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,700italic' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                /* this corrects for a ball that goes off
-                the right side of the page */
-                overflow-x: hidden;
-
-                background-image: url('images/whiteboard.jpg');
-                background-repeat:no-repeat;
-                background-attachment:fixed;
-                background-position: center; 
-                background-size: cover;
-
-                font-size: 16pt;
-                font-family: 'Source Sans Pro', sans-serif;
-            }
-
-            h1 {
-                color: #FC0612;
-                font-family: 'Patua One', cursive;
-                font-size: 90pt;
-                text-align: center;
-                font-weight: normal;
-                text-shadow: 5px 5px 0px #040404;
-                width: 100%;
-                padding: 15% 0;
-		margin: 0 0 5%;
-            }
-
-            h2 {
-                background: url('images/whiteboard_blur.jpg') no-repeat fixed;
-
-                font-size: 72pt;
-                text-align: center;
-
-                color: #FFFA06;
-                text-shadow: 5px 5px 0px #040404;
-                
-                padding-top: 5%;
-                padding-bottom: 2%;
-                margin: 0;
-            }
-            .quote {
-		background: transparent;
-                color: #FC0612;
-                font-family: 'Patua One', cursive;
-                font-size: 42pt;
-                font-style: italic;
-                padding: 1% 0;
-                text-align: center;
-                text-shadow: 2px 2px 0px #08327F;
-                width: 100%;
-            }
-
-            p, .contact-div {
-                background: url('images/whiteboard_blur.jpg') no-repeat fixed;
-                text-indent: 2%;
-                padding: 0 15%;
-                text-align: left;
-                margin: 0;
-                padding-bottom: 5%;
-                line-height: 35px;
-                color: rgb(243, 239, 237); 
-            }
-
-            .faq {
-                background: url('images/whiteboard_blur.jpg') no-repeat fixed;
-                padding: 0 15%;
-                margin: 0;
-                padding-bottom: 5%;
-                list-style: None;
-                text-align: left;
-                color: rgb(243, 239, 237); 
-            }
-
-            .faq>li:nth-child(odd) {
-                text-indent: -4%;
-                font-size: 28pt;
-                font-weight: 700;
-                font-style: italic;
-            }
-            .faq>li:nth-child(even) {
-                text-indent: 2%;
-                padding-bottom: 4%;
-            }
-
-            .hovertrap {
-                transition: all 0.5s;
-                position: fixed;
-                top: -150px;
-                right: -150px;
-                width: 300px;
-                height: 300px;
-                border-radius: 150px;
-            }
-            .ball {
-                transition: all 0.5s;
-                font-family: 'Patua One', cursive;
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                border-radius: 50px;
-                background-color: white;
-                box-shadow: 0px 0px 0 7px #FFFA06;
-                /* box-shadow: 0px 0px 5px #FFFA06; */
-                right: 50%;
-                top: 50%;
-                margin-top: -50px;
-                margin-right: -50px;
-                line-height: 100px;
-                text-align: center;
-                font-size: 25pt;
-                color: #FC0612;
-            }
-
-            .hovertrap:hover, .hovertrap.pageenter {
-                right: -450px;
-                top: -450px;
-                border-radius: 500px;
-                width: 1000px;
-                height: 1000px;
-            }
-
-            .navigation > li {
-                position: absolute;
-                transition: all 0.5s;
-                top: 0px;
-                left: 0px;
-                color: black;
-                /* text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black, -1px 1px 0 black; */
-                list-style: none;
-                font-size: 14pt;
-                width: 78px;
-                text-align: center;
-                height: 78px;
-                border-radius: 39px;
-                border: 1px solid grey;
-                line-height: 58pt;
-                text-align: center;
-                background-color: rgba(256,256,256,1);
-            }
-
-            .navigation {
-                opacity: 1;
-                transition: all 0.5s;
-            }
-
-            .navigation.hidden {
-                opacity: 0;
-                visibility: hidden;
-            }
-
-            .lightbulb {
-                position: absolute;
-                top: -4%;
-                left: 25%;
-                width: 50%;
-                /* height: 69%; */
-                opacity: 0.3;
-                z-index: -1;
-            }
-        </style>
+        <link href='public/css/main.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
@@ -181,70 +18,42 @@
             </div>
         </div>
 
-        <h1>ModuLearner
+        <h1 class="logo">ModuLearner
         <img src="images/icon_62335.svg" class="lightbulb"></img>
         </h1>
 
-        <h2>Curriculum + Community</h2>
-        <p>
-		We are creating a free, modular curriculum for supporting middle school and high school teachers in building active learning environments for their students.  Our content is contributed by subject-matter experts and curated by our team of educators, scientists, and artists.  Right now we are in the process of putting together our first online textbook, which will comprise of a range of science modules.  If you want more information, browse to our <a href="about.html">about page</a>.  If you would like to contribute to our first release, please <a href="#contact">contact us</a>.
-        </p>
+        <section class="infogroup">
+            <h2>Curriculum + Community</h2>
+            <p>
+            We are creating a free, modular curriculum for supporting middle school and high school teachers in building active learning environments for their students.  Our content is contributed by subject-matter experts and curated by our team of educators, scientists, and artists.  Right now we are in the process of putting together our first online textbook, which will comprise of a range of science modules.  If you want more information, browse to our <a href="about.html">about page</a>.  If you would like to contribute to our first release, please <a href="#contact">contact us</a>.
+            </p>
+        </section>
         <h2 class="quote">"Education is a social process; education is growth; education is not preparation for life but is life itself." <!-- this space is important --></h2>
-	<h2>How To Contribute</h2>
+        <section class="infogroup">
+            <h2>How To Contribute</h2>
 
-	<p>We are looking for educators, scientists, makers, and education enthusiasts to support this project by writing unique content for our curriculum!  If the idea of a free curriculum, grounded in active learning (and some humane values like sustainability and community), appeals to you, please join us.</p>
+            <p>We are looking for educators, scientists, makers, and education enthusiasts to support this project by writing unique content for our curriculum!  If the idea of a free curriculum, grounded in active learning (and some humane values like sustainability and community), appeals to you, please join us.</p>
 
-	<p>Currently we have several curricular modules being writting by different parties that will be put together into our first text release for school use by early spring 2015.  Right now, we are primarily writing content that is appropriate for middle school and high school science teachers of varying subjects.  All content will be written with the intention it can be taught in a hands-on matter.  Please remember, all content being contributed will be distributed free to the public. </p>
-	<div class="contact-div">If you would like have your content in our first release, please <a href="index.html#contact">contact us</a> with the following information:
-		<ol class="what-to-do">
-			<li>Who are you? (i.e., background? interest in education? experience in education?)</li>
-			<li>What topic would your module be on?</li>
-			<li>When would you be able to submit it by?</li>
-		</ol>
-	</div>
-	<p>We are open to just about anything that has a solid educational value, is based in a correct understanding of the subject matter, is active and fun for kids, and understandable to teachers.</p>
-	<h2 id="contact">Contact Us</h2>
-<p>If you have any questions or want to contribute:<br>
+            <p>Currently we have several curricular modules being writting by different parties that will be put together into our first text release for school use by early spring 2015.  Right now, we are primarily writing content that is appropriate for middle school and high school science teachers of varying subjects.  All content will be written with the intention it can be taught in a hands-on matter.  Please remember, all content being contributed will be distributed free to the public. </p>
+
+            <div class="contact-div">If you would like have your content in our first release, please <a href="index.html#contact">contact us</a> with the following information:
+
+                <ol class="what-to-do">
+                    <li>Who are you? (i.e., background? interest in education? experience in education?)</li>
+                    <li>What topic would your module be on?</li>
+                    <li>When would you be able to submit it by?</li>
+                </ol>
+            </div>
+            <p class="last-contribute">We are open to just about anything that has a solid educational value, is based in a correct understanding of the subject matter, is active and fun for kids, and understandable to teachers.</p>
+        </section>
+
+        <section class="infogroup">
+            <h2 id="contact">Contact Us</h2>
+            <p>If you have any questions or want to contribute:<br>
 Please send us an e-mail: <a href="mailto:modulearner@gmail.com">modulearner@gmail.com</a></p>
+        </section>
 
         <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script>
-          var $navigation = $('.navigation');
-          var $children = $navigation.children();
-          var count = $children.length;
-          var angle = (Math.PI / 3) / count;
-          $('.hovertrap').hover(function() {
-              $navigation.removeClass('hidden');
-              $('.ball').css({
-                  'border-left': '350px transparent',
-                  'border-bottom': '350px transparent'
-              });
-              $children.each(function(i) {
-                var $this = $(this);
-                var localangle = angle * (i);
-                var sin = 325 * Math.sin(localangle);
-                var cos = 325 * Math.cos(localangle);
-                $this.css({
-                    "top": sin,
-                    "left": -cos,
-                    "transform": 'rotate(-' + localangle + 'rad)'
-                });
-              });
-          }, function() {
-              $navigation.addClass('hidden');
-              $children.each(function(i) {
-                var $this = $(this);
-                $this.css({
-                    "top": 0,
-                    "left": 0,
-                });
-              });
-            
-          });
-	  window.setTimeout(function() {
-	    $('.hovertrap').removeClass('pageenter');
-	    $('.navigation').addClass('hidden');
-	  }, 500);
-        </script>
+        <script src="public/js/main.js"></script>
     </body>
 </html>

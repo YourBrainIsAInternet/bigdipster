@@ -2,170 +2,7 @@
 <html> <head>
         <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,700italic' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                /* this corrects for a ball that goes off
-                the right side of the page */
-                overflow-x: hidden;
-
-                background-image: url('images/whiteboard.jpg');
-                background-repeat:no-repeat;
-                background-attachment:fixed;
-                background-position: center; 
-                background-size: cover;
-
-                font-size: 16pt;
-                font-family: 'Source Sans Pro', sans-serif;
-            }
-
-            h1 {
-                color: #FC0612;
-                font-family: 'Patua One', cursive;
-                font-size: 90pt;
-                text-align: center;
-                font-weight: normal;
-                text-shadow: 5px 5px 0px #040404;
-                width: 100%;
-                padding: 15% 0;
-		margin: 0 0 5%;
-            }
-
-            h2 {
-                background: url('images/whiteboard_blur.jpg') no-repeat fixed;
-
-                font-size: 72pt;
-                text-align: center;
-
-                color: #FFFA06;
-                text-shadow: 5px 5px 0px #040404;
-                
-                padding-top: 5%;
-                padding-bottom: 2%;
-                margin: 0;
-            }
-            pre {
-                color: #FC0612;
-                font-family: 'Patua One', cursive;
-                font-style: italic;
-                font-size: 42pt;
-                text-align: center;
-                text-shadow: 2px 2px 0px #08327F;
-                width: 100%;
-                padding: 1% 0;
-            }
-
-            p {
-                background: url('images/whiteboard_blur.jpg') no-repeat fixed;
-                text-indent: 2%;
-                padding: 0 15%;
-                text-align: left;
-                margin: 0;
-                padding-bottom: 5%;
-                line-height: 35px;
-                color: rgb(243, 239, 237); 
-            }
-
-            .faq {
-                background: url('images/whiteboard_blur.jpg') no-repeat fixed;
-                padding: 0 15%;
-                margin: 0;
-                padding-bottom: 5%;
-                list-style: None;
-                text-align: left;
-                color: rgb(243, 239, 237); 
-            }
-
-            .faq>li:nth-child(odd) {
-                text-indent: -4%;
-                font-size: 28pt;
-                font-weight: 700;
-                font-style: italic;
-            }
-            .faq>li:nth-child(even) {
-                text-indent: 2%;
-                padding-bottom: 4%;
-            }
-
-            .hovertrap {
-                transition: all 0.5s;
-                position: fixed;
-                top: -150px;
-                right: -150px;
-                width: 300px;
-                height: 300px;
-                border-radius: 150px;
-            }
-            .ball {
-                transition: all 0.5s;
-                font-family: 'Patua One', cursive;
-                position: absolute;
-                width: 100px;
-                height: 100px;
-                border-radius: 50px;
-                background-color: white;
-                box-shadow: 0px 0px 0 7px #FFFA06;
-                /* box-shadow: 0px 0px 5px #FFFA06; */
-                right: 50%;
-                top: 50%;
-                margin-top: -50px;
-                margin-right: -50px;
-                line-height: 100px;
-                text-align: center;
-                font-size: 25pt;
-                color: #FC0612;
-            }
-
-            .hovertrap:hover {
-                right: -450px;
-                top: -450px;
-                border-radius: 500px;
-                width: 1000px;
-                height: 1000px;
-            }
-
-            .navigation > li {
-                position: absolute;
-                transition: all 0.5s;
-                top: 0px;
-                left: 0px;
-                color: black;
-                /* text-shadow: 1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black, -1px 1px 0 black; */
-                list-style: none;
-                font-size: 14pt;
-                width: 78px;
-                text-align: center;
-                height: 78px;
-                border-radius: 39px;
-                border: 1px solid grey;
-                line-height: 58pt;
-                text-align: center;
-                background-color: rgba(256,256,256,1);
-            }
-
-            .navigation {
-                opacity: 1;
-                transition: all 0.5s;
-            }
-
-            .navigation.hidden {
-                opacity: 0;
-                visibility: hidden;
-            }
-
-            .lightbulb {
-                position: absolute;
-                top: -4%;
-                left: 25%;
-                width: 50%;
-                /* height: 69%; */
-                opacity: 0.3;
-                z-index: -1;
-            }
-        </style>
+        <link href='/public/css/main.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
@@ -180,7 +17,7 @@
             </div>
         </div>
 
-        <h1>ModuLearner
+        <h1 class="logo">ModuLearner
         <img src="images/icon_62335.svg" class="lightbulb"></img>
         </h1>
         <h2 id="faq">FAQ</h2>
@@ -201,39 +38,6 @@
             <li>The Maker/DIY movement is the current iteration of a long history of people designing, testing, inventing, experimenting, building, etc, outside of traditional institutions of manufacturing and research. Nowadays, the expansion of technologies has allowed much of what is done inside a lab or industrial site to be performed at a smaller scale and cheaper cost within the confines of your own home (or classroom!). The growth in availabilty and simplicity of these components along with the help of the internet has brought about a larger sharing culture than has ever been known, allowing people to learn, repeat and modify one another's work at no cost. <br><br>This movement coincides well with learning science as it opens up the flood gates to projects and interactions that accomodate almost any interest while actually doing real science and engineering. We hope to take advantage of these resources both in terms of content and materials.</li>
         </ol>
         <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script>
-          var $navigation = $('.navigation');
-          var $children = $navigation.children();
-          var count = $children.length;
-          var angle = (Math.PI / 3) / count;
-          $('.hovertrap').hover(function() {
-              $navigation.removeClass('hidden');
-              $('.ball').css({
-                  'border-left': '350px transparent',
-                  'border-bottom': '350px transparent'
-              });
-              $children.each(function(i) {
-                var $this = $(this);
-                var localangle = angle * (i);
-                var sin = 325 * Math.sin(localangle);
-                var cos = 325 * Math.cos(localangle);
-                $this.css({
-                    "top": sin,
-                    "left": -cos,
-                    "transform": 'rotate(-' + localangle + 'rad)'
-                });
-              });
-          }, function() {
-              $navigation.addClass('hidden');
-              $children.each(function(i) {
-                var $this = $(this);
-                $this.css({
-                    "top": 0,
-                    "left": 0,
-                });
-              });
-            
-          });
-        </script>
+        <script src="/public/js/main.js"></script>
     </body>
 </html>
